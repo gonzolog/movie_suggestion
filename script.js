@@ -1,5 +1,6 @@
 // JavaScript program that recommends a movie based on emotion, current weather and age of audience
 
+<<<<<<< HEAD
 const create_movie = (title, emotion, weather, age_restriction) => {
     return {
         title,
@@ -29,3 +30,16 @@ const a_man_called_otto = create_movie("A Man Called Otto", "sad", "sun", 15)
 
 // Array containing every movies
 movie_list = [the_shining, the_ring, midsommar, groundhog_day, har, mamma_mia, everest, the_dark_knight, mission_impossible, chronicles_of_narnia, schindlers_list, a_man_called_otto]
+=======
+const create_movie = (emotion, weather, age_restriction) => {
+    return {
+        emotion, // "Scared", "Happy", "Excited", "Sad"
+        weather, // "Sun", "Rain", "Snow", "Dry"
+        age_restriction // Any whole number input from 1 - 18+
+    }
+}
+
+const the_shining = create_movie("scared", "snow", 15)
+console.log(the_shining)
+console.log("hello")
+>>>>>>> 0bf0d90d8855fcd049e727219b08e73d7695b626
