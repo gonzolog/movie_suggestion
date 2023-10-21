@@ -15,4 +15,4 @@ const suggest_movie = (mood, current_weather, age_of_audience) => {
 
 // Example usage:
     // suggest_movie(scary)
-    // output: "The Shining"
+    // output: "The Descent"
