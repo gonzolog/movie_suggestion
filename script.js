@@ -1,12 +1,23 @@
 // JavaScript program that recommends a movie based on emotion, current weather and age of audience
 
-<<<<<<< HEAD
-const create_movie = (title, emotion, weather, age_restriction) => {
+const create_movie = (_title, _emotion, _weather, _age_restriction) => {
     return {
-        title,
-        emotion, // Expected input: "Scared", "Happy", "Excited" or "Sad"
-        weather, // Expected input: "Sun", "Rain" or "Snow"
-        age_restriction // Expected input: Whole number greater than 0 
+        _title,
+        _emotion, // Expected input: "Scared", "Happy", "Excited" or "Sad"
+        _weather, // Expected input: "Sun", "Rain" or "Snow"
+        _age_restriction, // Expected input: Whole number greater than 0
+        get title() {
+            return this._title;
+        },
+        get emotion() {
+            return this._emotion;
+        },
+        get weather() {
+            return this._weather;
+        },
+        get age_restriction() {
+            return this._age_restriction;
+        }
     }
 };
 
@@ -29,17 +40,20 @@ const schindlers_list = create_movie("Schindler's List", "sad", "rain", 15)
 const a_man_called_otto = create_movie("A Man Called Otto", "sad", "sun", 15)
 
 // Array containing every movies
-movie_list = [the_shining, the_ring, midsommar, groundhog_day, har, mamma_mia, everest, the_dark_knight, mission_impossible, chronicles_of_narnia, schindlers_list, a_man_called_otto]
-=======
-const create_movie = (emotion, weather, age_restriction) => {
-    return {
-        emotion, // "Scared", "Happy", "Excited", "Sad"
-        weather, // "Sun", "Rain", "Snow", "Dry"
-        age_restriction // Any whole number input from 1 - 18+
-    }
-}
+movie_list = [the_shining, the_ring, midsommar, groundhog_day, harry_potter, mamma_mia, everest, the_dark_knight, mission_impossible, chronicles_of_narnia, schindlers_list, a_man_called_otto]
 
-const the_shining = create_movie("scared", "snow", 15)
-console.log(the_shining)
-console.log("hello")
->>>>>>> 0bf0d90d8855fcd049e727219b08e73d7695b626
+const suggest_movie = (emotion, weather, age_of_audience) => {
+    // Create array that matches users emotion input
+    let emotion_arr = []
+    for (let movie in movie_list) {
+        if (movie_list[movie].emotion === emotion) {
+            emotion_arr.push(movie_list[movie].title)
+        }
+    };
+    
+};
+suggest_movie("sad", "rain", "2");
+
+
+// const result = movie_list.filter((movie) => movie_list[movie].emotion === "happy");
+// console.log(result);
